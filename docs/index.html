@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/assignment3style.css">
-    <script src="js/assignment3script.js"></script>
     <title>Document</title>
 </head>
+
 <body>
+    
     <div class="mainContainer">
         <div class="card first">
             This is the first section
@@ -17,18 +18,36 @@
                 More
             </button>
             <div id="firstModal" class="modal">
-                <div class="modal-content">
+                <div class="modal-content one">
                     <div class="modal-header">
                         <span class="close">x</span>
-                        <h2>First Modal Header</h2>
+                        <h2>Create an Event</h2>
+                        <input type="text" id="Title" name="Title" value="Title" onfocus="inputFocus(this)" onblur="inputBlur(this)">
                     </div>
-                    <div class="modal-body">
-                        <p>
-                            Some text in the modal body
-                        </p>
-                        <p>
-                            Some other text
-                        </p>
+                    <div class="modal-body eventCreator">
+                        <label class="switch">
+                            <input class="togBtn" type="checkbox">
+                            <div class="slider round">
+                                <span class="Event">Event</span>
+                                <span class="Reminder">
+                                    Reminder
+                                </span>
+                            </div>
+                        </label>
+                        <div class="colorPicker">
+                            <label for="eventColor">
+                                Color:
+                            </label>
+                            <input type="color" id="eventColor" name="eventColor" value="ff0000">
+                        </div>
+                        <div class="dateSetup">
+                            <label id="dateLabel" for="startDate">
+                                Date:
+                            </label>
+                            <input type="date" id="startDate" name="startDate">
+                            <input type="time" id="startTime" name="startTime">
+                            <input type="time" id="endTime" name="endTime">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -40,22 +59,62 @@
                 More
             </button>
             <div id="secondModal" class="modal">
-                <div class="modal-content">
+                <div class="modal-content two">
                     <div class="modal-header">
                         <span class="close">x</span>
-                        <h2>Second Modal Header</h2>
+                        <h2>Checklist</h2>
                     </div>
-                    <div class="modal-body">
-                        <p>
-                            Some text in the modal body
-                        </p>
-                        <p>
-                            Some other text
-                        </p>
+                    <div class="modal-body checkList">
+                        <div class="checklistHeader">
+                            <div class="coloredCircle green">
+
+                            </div>
+                            <h3 class="checklistH3">
+                                Business
+                            </h3>
+                        </div>
+                        <ul class="checks">
+                            <li>
+                                <input type="checkbox" id="test1" name="test1" value="testing">
+                            <label for="test1">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="test2" name="test2" value="testing">
+                            <label for="test2">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="test3" name="test3" value="testing">
+                            <label for="test3">Lorem Ipsum</label>
+                            </li>
+                        </ul>
+                        <div class="checklistHeader">
+                            <div class="coloredCircle blue">
+
+                            </div>
+                            <h3 class="checklistH3">
+                                Private
+                            </h3>
+                        </div>
+                        <ul class="checks">
+                            <li>
+                                <input type="checkbox" id="test4" name="test4" value="testing">
+                            <label for="test4">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="test5" name="test5" value="testing">
+                            <label for="test5">Lorem Ipsum</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="test6" name="test6" value="testing">
+                            <label for="test6">Lorem Ipsum</label>
+                            </li>
+                        </ul>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/assignment3script.js"></script>
 </body>
 </html>

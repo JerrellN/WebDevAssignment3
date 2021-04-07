@@ -46,20 +46,19 @@
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal-contnt{
+.modal-content{
+    width: 20%;
     position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
-    height: 80vh;
     overflow: auto;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: .4s;
     animation-name: animatetop;
     animation-duration: .4s;
-    border-radius: 4rem;
+    border-radius: 1.5rem;
     -webkit-box-shadow: 5px 13px 36px 11px rgba(0,0,0,0.32); 
     box-shadow: 5px 13px 36px 11px rgba(0,0,0,0.32);
 
@@ -89,12 +88,199 @@ close:hover, close:focus{
     cursor: pointer;
 }
 
-modal-body{
-    padding: 2px 1rem;
+.modal-header{
+    text-align: center;
 }
+
+.modal-body{
+    padding: 2px 1rem;
+    display: grid;
+    
+}
+
+.eventCreator{
+    grid-template-rows: 2rem 2rem 6rem;
+    grid-gap: 1rem;
+}
+
+.dateSetup{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .3rem;
+}
+
+#startDate{
+    width: 100%;
+    height: 1.5rem;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.dateLabel{
+    grid-row-start: 1;
+}
+
+#startTime{
+    grid-row-start: 3;
+    grid-column-start: 1;
+}
+
+#endTime{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.colorPicker{
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#eventColor{
+    border: none;
+}
+
+
 
 .modal-footer{
     padding: 2px 1rem;
     background-color: #5cb85c;
     color: white;
+}
+
+.one{
+    height: 50%;
+}
+
+
+
+#Title{
+    display: block;
+    color: #888;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    border-color: white;
+}
+
+input{
+    border-style: solid;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 122px;
+    height: 34px;
+}
+
+.switch input{
+    display: none;
+}
+
+.round{
+    border-radius: 34px;
+}
+
+.round:before{
+    border-radius: 1rem;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff483b;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: " ";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider{
+    background-color: #2196F3;
+}
+
+input:focus + .slider{
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+ .slider:before{
+    -webkit-transform: translateX(86px);
+    -ms-transform: translateX(86px);
+    transform: translateX(86px);
+}
+
+.Reminder{
+    display: none;
+}
+
+.Event, .Reminder{
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider .Reminder{
+    display: block;
+}
+
+input:checked+ .slider .Event{
+    display: none;
+}
+
+.coloredCircle{
+    border-radius: 50%;
+    content: " ";
+    height: 3rem;
+    width: 3rem;
+}
+
+.checkList{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.green{
+    background-color: #5cb85c;
+    grid-row-start: 
+}
+
+.blue{
+    background-color: #2196F3;
+}
+
+.checklistHeader{
+    display: flex;
+    align-items: center;
+}
+
+.checklistH3{
+    padding: 1rem;
+}
+
+.checks{
+    margin-left: 30%;
+    list-style: none;
 }

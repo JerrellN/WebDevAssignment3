@@ -10,11 +10,6 @@ var btn = document.getElementsByClassName("btn");
 
 var span = document.getElementsByClassName("close");
 
-
-console.log(btn);
-console.log(modal);
-console.log(span);
-
 btn[0].onclick = function() {
     modal[0].style.display = "block";
 }
@@ -22,8 +17,6 @@ btn[0].onclick = function() {
 btn[1].onclick = function() {
     modal[1].style.display = "block";
 }
-
-
 
 
 span[0].onclick = function() {
@@ -46,5 +39,18 @@ window.onclick = function(event) {
         modal[1].style.display = "none";
     }
 
+    
+}
+
+function inputFocus(i){
+    if (i.value== i.defaultValue) {
+        i.value = " "; i.style.color = "#000";
+    }
+}
+
+function inputBlur(i){
+    if (i.value == " " || i.value =="") {
+        i.value = i.defaultValue; i.style.color="#888";
+    }
     
 }
